@@ -4,6 +4,7 @@
 
 import { createStore, applyMiddleware,combineReducers, compose } from 'redux'
 import homeReducer from '../containers/home/reducer'
+import loginReducer from '../containers/login/reducer'
 import { routerReducer } from 'react-router-redux'
 import { isBrowser } from '../util/utils'
 import thunk from 'redux-thunk'
@@ -12,6 +13,7 @@ export default function () {
 
     const reducers = combineReducers({
         home: homeReducer,
+        login: loginReducer,
         router: routerReducer
 
     });
